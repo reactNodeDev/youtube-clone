@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from "react";
+import "./App.css";
+import TopLoader from "./AtomicComponents/Loader/topLoader";
+import Navbar from "./Components/Navbar";
+import { Context } from "./context/contextApi";
+import AppRouter from "./router/appRouter";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const { openSidebar, setOpenSidebar } = useContext(Context);
+	return (
+		<div className="App">
+			<TopLoader />
+			<BrowserRouter>
+				<AppRouter />
+				<Navbar onMenuClick={() => setOpenSidebar(!openSidebar)} />
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;
