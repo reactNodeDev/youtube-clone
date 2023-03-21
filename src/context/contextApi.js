@@ -18,15 +18,12 @@ export const AppContext = (props) => {
 
 		await get(`search/?q=${query}`)
 			.then(async (res) => {
-				setError(null)
-				console.log("----- get api call res -----");
-				console.log(res);
-				console.log("----- get api call res -----");
-				if(res) setSearchResults({ ...res });
+				setError(null);
+				if (res) setSearchResults({ ...res });
 			})
 			.catch((err) => {
 				console.log(err);
-				setError(err.message)
+				setError(err.message);
 			});
 		setLoading(false);
 		setProgress(100);
