@@ -1,7 +1,7 @@
-import React from "react";
+import React, { lazy } from "react";
 import { explore, library, menu, menuItems } from "../data";
 
-import SidebarMenuItem from "../AtomicComponents/SidebarMenuItem";
+const SidebarMenuItem = lazy(() => import('../AtomicComponents/SidebarMenuItem'))
 
 const Sidebar = ({ open, setOpen }) => {
 	return (

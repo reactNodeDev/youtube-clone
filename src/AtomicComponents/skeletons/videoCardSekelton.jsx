@@ -5,13 +5,13 @@ const VideoCardSkeleton = ({ type }) => {
 	const COUNTER = 12;
 	const VideoCardSkeletonDiv = () => (
 		<div
-			className=" h-[15rem] w-['100%'] col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3 flex flex-col items-center bg-neutral-800 animate-pulse rounded-md"
+			className=" h-[20rem] w-['100%'] col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3 flex flex-col items-center bg-neutral-800 animate-pulse rounded-md"
 		>
-			<div className="rounded-md h-[60%] w-full flex-1 mb-2 relative bg-neutral-600 ">
+			<div className="rounded-md min-h-[60%] w-full flex-1 mb-2 relative bg-neutral-600 ">
 			</div>
 
-			<div className="flex items-start gap-2 flex-1 mt-2 h-[40%] overflow-hidden w-full">
-                <div circle className="rounded-full h-10 w-10 bg-neutral-600"> </div>
+			<div className="flex items-start gap-2 flex-1 mt-2 h-[40%] overflow-hidden w-full p-2">
+                <div circle className="rounded-full h-[10px] w-[15px] bg-neutral-600"> </div>
                 
 				<div className="text-left text-xsm w-full h-full flex flex-col justify-around">
 					<div className="font-semibold text-sm bg-neutral-600">

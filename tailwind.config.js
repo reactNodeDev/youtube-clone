@@ -15,6 +15,10 @@ module.exports = {
       fontSize:{
         xsm:['11px']
       },
+      backgroundColor:{
+        primaryItemBg:'#FFFFFF15',
+        hoverBg:'#272727'
+      }
     },
   },
   plugins: [

@@ -18,7 +18,7 @@ const VideoFeed = ({ open, setOpen }) => {
 		return () => {
 			clearTimeout(showResults);
 		};
-	}, [query]);
+	}, []);
 
 	const parentWrapperClassname = `min-h-[calc(100%-3.5rem)] items-center justify-center z-40 ${
 		open
